@@ -1,0 +1,6 @@
+packages/
+
+Release/
+Debug/
+bin/
+obj/
