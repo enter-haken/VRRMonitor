@@ -45,9 +45,20 @@ namespace VRRMonitor
             }
         }
 
+        private string DelayString
+        {
+            get
+            {
+                if (Delay.HasValue && Delay == -9999)
+                    return "Zug fällt aus!";
+
+                return $"Verspätung - {Delay ?? 0}";
+            }
+        }
+
         public override string ToString()
         {
-            return $"Aktuell {Hour.ToString("D2")}:{Minute.ToString("D2")} - Verspätung {Delay ?? 0} - {Name} - Richtung {Direction}";
+            return $"Aktuell {Hour.ToString("D2")}:{Minute.ToString("D2")} - {DelayString} - {Name} - Richtung {Direction}";
         }
     }
 }

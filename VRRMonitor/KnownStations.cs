@@ -21,6 +21,7 @@ namespace VRRMonitor
                     {
                         StationId = 20007501,
                         StationName = "Herne+Bf",
+                        Filters = new List<Train> { Train.RE3, Train.S2 },
                         RowCount = 24
                     },
                     new Station
